@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react';
+import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
+  
+    
+  const [lat, setLat] = useState(0);
+  const [lon, setLon] = useState(0);
+  
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLat(position.coords.latitude);
+        setLon(position.coords.longitude);
+      });
+    } else {
+      console.error('Geo-location has been disabled');
+    }
+  };
+  
+  useEffect(() => {
+    getLocation();
+  }, []);
+  
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Navbar lat={lat} lon={lon}/>
+      
+   
     </div>
   );
 }
