@@ -8,7 +8,12 @@ const Weather = (props) => {
     
     const lat = props.lat;
     const lon = props.lon;
+
+    
     const [data,setData] = useState([]);
+    const[c, setC] = useState('C°')
+    const [f, setF] = useState('F°');
+
     
     
     
@@ -45,23 +50,32 @@ const Weather = (props) => {
             await fetch(`https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${lon}&cnt=1&units=imperial&appid=${key}`)
             .then(res => res.json())
             .then(result => {
+                
                 setData(result);
                 
                 console.log(result);
-               
+                
                 
                 
             });
+            
         }
-    }
+     }
+
     
-    
-        
+     
         fetchData();
-        
+    
     
     },[lat,lon])
-
+    
+    const buttonHandler = () => {
+       
+        
+        setC('F°')
+        setF('C°')
+        
+    }
     
     
       return(
@@ -74,12 +88,24 @@ const Weather = (props) => {
           </div>
           <div className="weather-box">
           <div className="temperature">
-          {Math.round(data.main.temp)}
+          {(typeof data.main != 'undefined')?
+            (c === 'F°') ?
+            (Math.round(data.main.temp - 32) * 5/9)
+            : (Math.round(data.main.temp))
+           : (
+              <div>
+              </div>
+           )}
+           
+          {f}
+
+            
+          
           </div>
           <div className="weather">  
-          {data.weather[0].description}
+          
           </div>
-            <button className="btn">C°</button>
+            <button className="btn" onClick={buttonHandler}>{c}</button>
           </div>
           </main>
       </div>

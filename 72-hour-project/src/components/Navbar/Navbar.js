@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <div>
             
             <h1><strong>This will be where we link our components</strong></h1>
-            <Ticketmaster lat={props.lat} lon={props.lon}/>
+            {/*<Ticketmaster lat={props.lat} lon={props.lon}/>*/}
             <Weather lat={props.lat} lon={props.lon} />
             <Nasa lat={props.lat} lon={props.lon} />
         
