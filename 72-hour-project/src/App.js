@@ -22,13 +22,13 @@ function App() {
   
   useEffect(() => {
     getLocation();
-  }, []);
+  }, [lat,lon]);
   
   
   return (
     <div className="App">
       
-      <Navbar lat={lat} lon={lon}/>
+      <Navbar lat={lat} lon={lon} />
       
    
     </div>
