@@ -1,19 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 //location props passed as props.lat and props.lon
 
 const Nasa = (props) => {
+    const baseURL = 'https://api.nasa.gov/planetary/earth/imagery';
+    const API_KEY = '84Y6zLqta7zUh4tMcNwOFnWzFtxRezUHA5dS2fRd' ;
+    const [img, setImg] = useState('');
     
-    return(
+    
+    useEffect(() => {
+        const fetchPic = async () => {
+            if(props.lon !== 0 && props.lat !== 0) {
+      
+      let url = `${baseURL}?lon=${props.lon}&lat=${props.lat}&date=2021-09-10&api_key=${API_KEY}`;
+      
+      
+      await fetch(url)
+      .then((res) => {
+        console.log(res.url);
         
-        <div className="nasa-container">
+        setImg(res.url);
+      });
+    };
+
+}
+    fetchPic();
+
+    },[props.lat,props.lon])
+    
+    
+    return (
+        <div>
             
-            <p>This is the Nasa app</p>
-            <p>Your latitude is {props.lat} and your longitude is {props.lon}</p>
-        
         </div>
     )
 }
+
 
 export default Nasa;
