@@ -1,8 +1,11 @@
 .tm-container {
-  
   width: 100%;
+<<<<<<< HEAD
   height: fit-content;
 
+=======
+  height: 100vh;
+>>>>>>> a36a5aa9be9b6a3215de05d7eb09ac7f822389fd
 }
 
 .nasa-container {
@@ -12,5 +15,98 @@
 
 .w-container {
   width: 100%;
+<<<<<<< HEAD
   height: fit-content;
 }
+=======
+  height: 100vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1553931121-fae2d7d7e9f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
+  background-size: cover;
+  background-position: bottom;
+  width: 411px;
+  height: 731px;
+  left: 40%;
+  right: 50%;
+}
+
+main {
+  padding: 25px;
+}
+
+.location-box .location {
+  color: ivory;
+  font-size: 46px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 4px 4px rgba(25, 25, 50, 0.5);
+  padding: 15px;
+  font-style: italic;
+}
+
+.location-box .date {
+  color: ivory;
+  font-size: 26px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(25, 25, 50, 0.7);
+  padding-bottom: 10px;
+}
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temperature {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(175, 175, 175, 0.15);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: ivory;
+  font-size: 102px;
+  font-weight: 900;
+  text-shadow: 6px 6px rgba(20, 20, 20, 1);
+  text-align: center;
+  box-shadow: 6px 6px 4px 2px rgba(25, 25, 25, 0.9);
+}
+
+.weather-box .weather {
+  color: ivory;
+  font-size: 52px;
+  font-weight: 900px;
+  text-shadow: 4px 4px rgba(10, 10, 10, 1);
+  padding-top: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.btn {
+  margin: 30px auto;
+  background-color: rgba(175, 175, 175, 0.15);
+  border-radius: 15px;
+  padding: 15px 25px;
+  color: ivory;
+  font-size: 28px;
+  font-weight: 900;
+  text-shadow: 3px 3px rgba(10, 10, 10, 1);
+  text-align: center;
+  box-shadow: 4px 3px rgba(15, 15, 15, 0.8);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+>>>>>>> a36a5aa9be9b6a3215de05d7eb09ac7f822389fd
