@@ -90,7 +90,7 @@ const Weather = (props) => {
           <div className="temperature">
           {(typeof data.main != 'undefined')?
             (c === 'F°') ?
-            (Math.round(data.main.temp - 32) * 5/9)
+            (Math.round(data.main.temp - 32) * 0.5)
             : (Math.round(data.main.temp))
            : (
               <div>
@@ -103,7 +103,13 @@ const Weather = (props) => {
           
           </div>
           <div className="weather">  
-          
+          {(typeof data.main != 'undefined')?
+          (data.weather[0].description)
+          : (
+            <div>
+            </div>
+          )}
+
           </div>
             <button className="btn" onClick={buttonHandler}>{c}</button>
           </div>

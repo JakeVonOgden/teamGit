@@ -32,7 +32,7 @@ const Nasa = (props) => {
     
     return (
         <div>
-            <img src={img} alt=""/>
+            
         </div>
     )
 }

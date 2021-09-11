@@ -1,15 +1,4 @@
-.tm-container {
-  width: 100%;
-  height: 100vh;
-}
-
-.nasa-container {
-  width: 100%;
-  height: 100vh;
-}
-
-.w-container {
-  width: 100%;
+.App {
   height: 100vh;
 }
 
@@ -25,17 +14,8 @@ body {
 
 .app {
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1553931121-fae2d7d7e9f7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80");
-  background-size: cover;
-  background-position: bottom;
-  width: 411px;
-  height: 731px;
-  left: 40%;
-  right: 50%;
-}
-
-main {
-  padding: 25px;
+  background-image: url("https://api.nasa.gov/planetary/earth/imagery?lon=-86.245376&lat=39.708262399999995&date=2021-09-10&api_key=84Y6zLqta7zUh4tMcNwOFnWzFtxRezUHA5dS2fRd");
+  background-size: contain;
 }
 
 .location-box .location {
@@ -43,19 +23,23 @@ main {
   font-size: 46px;
   font-weight: 500;
   text-align: center;
-  text-shadow: 4px 4px rgba(25, 25, 50, 0.5);
-  padding: 15px;
+  text-shadow: 4px 4px rgba(25, 25, 25, 0.9);
+  box-shadow: 6px 6px rgba(25, 25, 25, 0.9);
+  padding: 20px;
   font-style: italic;
+
+  background-color: rgba(45, 45, 45, 0.5);
 }
 
 .location-box .date {
   color: ivory;
-  font-size: 26px;
+  font-size: 46px;
   font-weight: 400;
   font-style: italic;
   text-align: center;
-  text-shadow: 2px 2px rgba(25, 25, 50, 0.7);
-  padding-bottom: 10px;
+  text-shadow: 4px 4px rgba(25, 25, 25, 0.9);
+  background-color: rgba(45, 45, 45, 0.5);
+  box-shadow: 6px 6px 6px 6px rgba(25, 25, 25, 0.9);
 }
 
 .weather-box {
