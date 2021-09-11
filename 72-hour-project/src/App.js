@@ -6,8 +6,8 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   
     
-  const [lat, setLat] = useState(0);
-  const [lon, setLon] = useState(0);
+  const [lat, setLat] = useState();
+  const [lon, setLon] = useState();
   
   const getLocation = () => {
     if (navigator.geolocation) {
