@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import {Container, Table} from 'reactstrap';
 import Geohash from 'latlon-geohash';
 
 
@@ -10,7 +11,8 @@ const Ticketmaster = (props) => {
     const API_KEY = "H7Dt31l1jNxQDlKluqGGSlIE2GDEJjil";
     const [eventName, setEventName] = useState("");
     const [eventDate, setEventDate] = useState("");
-    const [eventVenue, setEventVenue] = useState("");git 
+    const [eventVenue, setEventVenue] = useState("");
+    const [eventTime, setEventTime] = useState("");
 
 
     useEffect(() => {
@@ -28,6 +30,8 @@ const Ticketmaster = (props) => {
             setEventName(data._embedded.events[0].name);
         
             setEventDate(data._embedded.events[0].dates.start.localDate);
+
+            setEventTime(data._embedded.events[0].dates.start.localTime);
             
             setEventVenue(data._embedded.events[0]._embedded.venues[0].name);
           
@@ -38,13 +42,30 @@ const Ticketmaster = (props) => {
     
     return(
     
-        <div>
+        <div >
             
-            <p>event: {eventName}</p>
-            <p>eventDate: {eventDate}</p>
-            <p>eventVenue: {eventVenue}</p>
+            <h3>Events Near You</h3>
+            <Table striped bordered hover variant="dark" responsive="md">
+                
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{eventName}</td>
+                        <td>{eventDate}</td>
+                        <td>{eventTime}</td>
+                        <td>{eventVenue}</td>
+                    </tr>
+                </tbody>
             
-        
+        </Table>
+
         </div>
     )
 }
