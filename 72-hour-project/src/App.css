@@ -1,11 +1,6 @@
 .tm-container {
   width: 100%;
-<<<<<<< HEAD
-  height: fit-content;
-
-=======
   height: 100vh;
->>>>>>> a36a5aa9be9b6a3215de05d7eb09ac7f822389fd
 }
 
 .nasa-container {
@@ -15,10 +10,6 @@
 
 .w-container {
   width: 100%;
-<<<<<<< HEAD
-  height: fit-content;
-}
-=======
   height: 100vh;
 }
 
@@ -109,4 +100,3 @@ main {
   box-shadow: 4px 3px rgba(15, 15, 15, 0.8);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
->>>>>>> a36a5aa9be9b6a3215de05d7eb09ac7f822389fd
